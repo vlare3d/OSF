@@ -1,20 +1,18 @@
-## oslEncoder库介绍
+# OSF Open Slice Format Encoder Introduction
 
-oslEncoder实现了将其他光固化切片软件切出来的数据编码为osl(open source vlare). 
-他的主要输入为bmp切片数据和配置文件。 通过oslEncoder，您可以灵活的配置您的切片文件，
-并且让这些切片数据稳定的在[Vlare Core](https://www.vlare.net/)主板上打印运行。
+OSF-Encoder allows programs to easily export slice image for resin printing to OSF(Open Slice Format). OSF is currently supported by [Vlare Core board and Vlare Slicer](https://www.vlare.net/).
+The primary inputs are, BMP, and Slice Setting for printing  Through OSF-Encoder, you can export from your favorite slicer and print on OSF supported hardware.
 
-> 注意:本开源库目前只支持了window的编译转换。
 
-## 快速上手
+> Note:Current code only support conversion under Windows. 
 
-如下为调用的全部接口:
+# Encoder
+
 ```c++
 int main()
 {
 	OsfConfig config;
 	BmpParser bmpParser;
-
     osfEncoder parser;
 	parser.setConfig(config);
 	// img:RGB565,raw; 148*80;300*140;208*116;404*240
@@ -42,7 +40,5 @@ int main()
 }
 ```
 
-上述代码中的raw数据来自于将bmp图片数据去掉头数据以后得到，raw用于在触摸屏上显示打印预览图片.
-
-> 注意: 请将编译目录设置为build_dir, 同时要将build_dir里面的imgs解压到build_dir目录里面。 运行demo时，会用到这里面的文件。
+The raw data in above code is BMP picture data without the header. Raw is used for preview. 
 
