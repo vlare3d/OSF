@@ -72,17 +72,17 @@ OSF格式内的数据是二进制形式写入的。 我们按照一定的规则�
 | 版本号                       | 2Bytes //Version：0x0001                                           |
 | 图像对数                      | 1Bytes //Default Value:：2                                         |
 | 图片1长度(预览图1)               | 3Bytes                                                            |
-| 图片1数据（RGB565 RAW）         | w*h148*80  148*80*2Bytes                                          |
+| 图片1数据（RGB565 RAW）         | WxH,148*80 , 148x80x2Bytes                                          |
 | 图片2长度(预览图2)               | 3Bytes                                                            |
-| 图片2数据（RGB565 RAW）         | w*h300*140  300*140*2Bytes                                        |
+| 图片2数据（RGB565 RAW）         | WxH,300x140  ,300x140x2Bytes                                        |
 | 图片3长度(预览图3)               | 3Bytes                                                            |
-| 图片3数据（RGB565 RAW）         | w*h208*116 208*116*2Bytes                                         |
+| 图片3数据（RGB565 RAW）         | WxH,208x116 ,208x116x2Bytes                                         |
 | 图片4长度(预览图4)               | 3Bytes                                                            |
-| 图片4数据（RGB565 RAW）         | w*h404*240  404*240*2Bytes                                        |
+| 图片4数据（RGB565 RAW）         | WxH,404x240  ,404x240x2Bytes                                        |
 | 图像分辨率X                    | 2Bytes                                                            |
 | 图像分辨率Y                    | 2Bytes                                                            |
-| 像素精度                      | 2Bytes（um 写入放大100倍：比如100um写入10000 下同）                             |
-| 镜像                        | 1Bytes（0x00 未镜像    0x01  X轴镜像    0x02  Y轴镜像    0x03 XY轴镜像）        |
+| 像素精度                      | 2Bytes（um, 写入放大100倍：比如100um写入10000 下同）                             |
+| 镜像                        | 1Bytes（0x00 未镜像  ， 0x01  X轴镜像  ，  0x02  Y轴镜像  ，  0x03 XY轴镜像）        |
 | 底层光强PWM                   | 1Bytes                                                            |
 | 光强PWM                     | 1Bytes                                                            |
 | 灰度启用                      | 1Bytes(Default Value:0x00)                                        |
@@ -112,7 +112,7 @@ OSF格式内的数据是二进制形式写入的。 我们按照一定的规则�
 | 底层回程距离（总）                 | 3Bytes（um）                                                        |
 | 回程距离（慢速）                  | 3Bytes（um）                                                        |
 | 回程距离（总）                   | 3Bytes（um）                                                        |
-| 曲率类型                      | 1Bytes（0x00:S型加速度  0x01:T型加速度  Default Value:S型加速度    目前只支持S型加速度） |
+| 曲率类型                      | 1Bytes（0x00:S型加速度，  0x01:T型加速度 ， Default Value:S型加速度   ,目前只支持S型加速度） |
 | 底层抬升速度（启动）                | 2Bytes（mm/min）                                                    |
 | 底层抬升速度（慢速）                | 2Bytes（mm/min）                                                    |
 | 底层抬升速度（快速）                | 2Bytes（mm/min）                                                    |
