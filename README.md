@@ -16,10 +16,10 @@ int main()
 	// img:RGB565,raw; 148*80;300*140;208*116;404*240
     // This step is optional. If your print file does not have a 3D preview image,
     // you do not need to load it, which does not affect printing
-	parser.addIconImg(readRawFile("./imgs/raw/img1.raw"),
-					  readRawFile("./imgs/raw/img2.raw"),
-					  readRawFile("./imgs/raw/img3.raw"),
-					  readRawFile("./imgs/raw/img4.raw"));
+	parser.addIconImg(readRawFileFromBmp("./imgs/raw/img1.bmp"),
+					  readRawFileFromBmp("./imgs/raw/img2.bmp"),
+					  readRawFileFromBmp("./imgs/raw/img3.bmp"),
+					  readRawFileFromBmp("./imgs/raw/img4.bmp"));
 
 	std::vector<unsigned char> sourceData;
 	for (int i = 0; i < _sliceLayerCount; i++) {
