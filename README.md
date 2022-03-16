@@ -56,6 +56,9 @@ This tool class implements the entire process of combining parameter configurati
 - BmpParser.cpp/BmpParser.h 
 This class is mainly to parse bmp image data, after reading the data, convert it and store it in the vector container.
 
+- convertBMP.py
+Convert images from png, jpg, bmp format to rgb565 data for generating preview image data. Need install PIL python image lib.
+
 # OSF format data
 
 ## 1. OSF format table
