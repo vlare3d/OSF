@@ -59,6 +59,9 @@ This class is mainly to parse bmp image data, after reading the data, convert it
 - convertBMP.py
 Convert images from png, jpg, bmp format to rgb565 data for generating preview image data. Need install PIL python image lib.
 
+- convertBMP.c++
+Convert images from png, jpg, bmp format to rgb565 data for generating preview image data. This function implementation needs to rely on Qt.
+
 # OSF format data
 
 ## 1. OSF format table
