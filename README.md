@@ -136,6 +136,8 @@ A completed OSF file data format, please refer to this table
 | Number of reserved                                    | 20Bytes                                                                                                                                                 |
 | Protocol type                                         | 1Bytes（Default Value: 0x00）                                                                                                                             |
 
+>**Number of reserved** Note:For versions after vlare slicer-2.02, the parameters reserved here will be used. When exporting to osf format, all the values here can be set to 0, which has no effect on printing.
+
 ## 2. Image compression method
 
 In light based resin printing, layer image data accounts for most of the file size. Here is an introduction to how OSF compresses image data. The image compression consists of two parts:
