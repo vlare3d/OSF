@@ -133,7 +133,29 @@ A completed OSF file data format, please refer to this table
 | Retraction speed (slow speed)                         | 2Bytes（mm/min）                                                                                                                                          |
 | Layer back speed (fast)                               | 2Bytes（mm/min）                                                                                                                                          |
 | Retraction curvature                                  | 1Bytes (Default Value::5)                                                                                                                               |
-| Number of reserved                                    | 20Bytes                                                                                                                                                 |
+| Base lifting speed (End)                  | 2Bytes(mm/min)                                                           |
+
+| Base lifting Curvature  (Decelerate)                 | 1Bytes (Default Value:5)                                               |
+
+| Lifting speed (End)                  | 2Bytes (mm/min)                                              |
+
+| Lifting Curvature  (Decelerate)                  | 1Bytes (Default Value:5)                                              |
+
+| Base Retract speed (End)                 | 2Bytes (mm/min)                                              |
+
+| Base Retract Curvature  (Decelerate)                 | 1Bytes (Default Value:5)                                             |
+
+| Retract speed (End)                  | 2Bytes (mm/min)                                             |
+
+| Retract  Curvature  (Decelerate)                  | 1Bytes (Default Value:5)                                             |
+
+|  Base Rest Before Lift                  | 2Bytes (unit:10ms)                                             |
+
+| Base Rest After Lift                 | 2Bytes (unit:10ms)                                             |
+
+|  Base Rest After Retraction                  | 2Bytes (unit:10ms)                                             |
+
+| Number of reserved                                    | 2Bytes                                                                                                                                                 |
 | Protocol type                                         | 1Bytes（Default Value: 0x00）                                                                                                                             |
 
 >**Number of reserved** Note:For versions after vlare slicer-2.02, the parameters reserved here will be used. When exporting to osf format, all the values here can be set to 0, which has no effect on printing.
